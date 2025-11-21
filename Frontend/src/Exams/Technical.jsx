@@ -261,7 +261,7 @@ const Technical = () => {
   const calculateResult = () => {
     let finalScore = 0;
     selectedOptions.forEach((ans, i) => {
-      const correct = questions[i].correct;
+      const correct = questions[i].correctAnswer;
       if (Array.isArray(correct)) {
         if (correct.includes(ans)) finalScore++;
       } else {

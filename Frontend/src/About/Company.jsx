@@ -51,8 +51,6 @@ const Company = () => {
       const offset = window.scrollY;
       setIsShrunk(offset > 50);
       setShowBackToTop(offset > 300);
-
-      // Start counters animation when section is visible
       const countersSection = document.getElementById("counters-section");
       if (
         countersSection &&
@@ -67,7 +65,6 @@ const Company = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [countersStarted]);
 
-  // Animate counters
   useEffect(() => {
   if (countersStarted) {
     const usersTarget = 12000;

@@ -276,7 +276,7 @@ const About = () => {
           </div>
           <div className="details-animated">
 
-            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Akash Maity<span style={{color:'blue',fontSize:'14px',fontWeight:'400'}}>Project head...</span></p>
+            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Akash Maity</p>
           </div>
         </div>
         { /* second person  */}

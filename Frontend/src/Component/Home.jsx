@@ -31,7 +31,7 @@ function Home() {
   const [newFeedback, setNewFeedback] = useState("");
   const [showForm, setShowForm] = useState(false);
     useEffect(() => {
-    fetch('/api/feedback')
+    fetch('http://localhost:5000/api/feedback')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch feedback');
         return res.json();
@@ -53,7 +53,7 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newName.trim() && newFeedback.trim()) {
-      fetch('/api/feedback', {
+      fetch('http://localhost:5000/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: newName.trim(), feedback: newFeedback.trim() })
@@ -63,7 +63,8 @@ function Home() {
           return res.json();
         })
         .then(savedFeedback => {
-          setComments(prev => [...prev, savedFeedback]);
+          const saved = savedFeedback && savedFeedback.feedback ? savedFeedback.feedback : savedFeedback;
+          setComments(prev => [...prev, saved]);
           setNewName("");
           setNewFeedback("");
           setShowForm(false);

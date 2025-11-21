@@ -33,16 +33,17 @@ function SignupPage() {
   };
 
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@gmail\.com$/;
+    const emailRegex = /^[^\s@]+@gmail\.com$/i;
     return emailRegex.test(email) ? '' : 'Email must be a valid @gmail.com address.';
   };
 
   const validatePassword = (password) => {
-    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-    return passwordRegex.test(password)
-      ? ''
-      : 'Password must be at least 8 characters and include 1 uppercase letter, 1 number, and 1 special character.';
-  };
+  const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  return passwordRegex.test(password)
+    ? ''
+    : 'Password must be at least 8 characters long and must include at least 1 uppercase letter, 1 number, and 1 special character.';
+};
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -109,8 +110,8 @@ function SignupPage() {
           console.error("❌ Failed to send email:", err);
         });
 
-        alert('🎉 Signup Successful! Go to login.');
-        navigate('/login');
+        alert('🎉 Signup Successful!');
+        navigate('/home');
 
         setFormData({
           name: '',
@@ -132,15 +133,15 @@ function SignupPage() {
    return (
       <div className="signup-container">
         <div className="left-panel">
-          <h1 className="logo" style={{marginTop:'1vh',marginLeft:'-15vh'}}>
+          {/* <h1 className="logo" style={{marginTop:'1vh',marginLeft:'-15vh'}}>
             <img
               className="logo1"
               src="https://dynamic.design.com/asset/logo/b777bb05-ef3a-40c1-81e5-c218a4b7311f/logo?logoTemplateVersion=1&v=638750126514600000&text=+NovaExam+online+exam+potel&layout=auto"
               alt="NovaExam"
             />
             NovaExam
-          </h1>
-          <h6 className="title" style={{marginTop:'-0.1vh'}}>Let's, <h6 style={{marginTop:'-1vh'}}>Get Started!✈️</h6></h6>
+          </h1> */}
+          <h6 className="title" style={{marginTop:'-0.1vh'}}>Let's, <span style={{display: 'block', marginTop:'-1vh'}}>Get Started!✈️</span></h6>
           <p className="subtitle" style={{marginTop:'-1vh'}}>Create your account and put your knowledge to the test!🗯️</p>
 
           <form className="signup-form" onSubmit={handleSubmit} >
