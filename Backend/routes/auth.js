@@ -8,7 +8,7 @@ require('dotenv').config();
 const JWT_SECRET = process.env.JWT_SECRET || 'yourSecretKey';
 
 // Password validation regex: exactly 8 chars, 1 uppercase, 1 digit, 1 special char
-const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
+const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 // Signup route
 router.post('/signup', async (req, res) => {
@@ -24,11 +24,12 @@ router.post('/signup', async (req, res) => {
       return res.status(400).json({ message: 'Email must be @gmail.com' });
     }
 
-    if (!passwordRegex.test(password)) {
-      return res.status(400).json({
-        message: 'Password must be exactly 8 characters, contain 1 uppercase letter, 1 number, and 1 special character',
-      });
-    }
+  if (!passwordRegex.test(password)) {
+  return res.status(400).json({
+    message: 'Password must be at least 8 characters, contain 1 uppercase letter, 1 number, and 1 special character',
+  });
+}
+
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
