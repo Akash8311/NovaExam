@@ -59,16 +59,7 @@ function LoginPage() {
   return (
     <div className="signup-container">
       <div className="left-panel">
-        <div className="logo2" style={{ marginTop: '2vh', marginLeft: '-6vh' }}>
-          <h1 className="logo">
-            <img
-              className="logo1"
-              src="https://dynamic.design.com/asset/logo/b777bb05-ef3a-40c1-81e5-c218a4b7311f/logo?logoTemplateVersion=1&v=638750126514600000&text=+NovaExam+online+exam+potel&layout=auto"
-              alt="NovaExam Logo"
-            />
-            NovaExam
-          </h1>
-        </div>
+     
 
         <h6 className="title" style={{ marginTop: '-5vh' }}>You’re back....👀</h6>
         <span className="span" style={{ marginTop: '-3vh' }}>Welcome!</span>

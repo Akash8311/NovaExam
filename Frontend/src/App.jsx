@@ -22,6 +22,8 @@ import Competitive from './Indrusty/Competitive';
 import Genaral from './Indrusty/Genaral';
 import It from './Indrusty/It';
 
+
+
 const AppContent = () => {
   const location = useLocation();
   
