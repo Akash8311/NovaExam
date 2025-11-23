@@ -161,7 +161,7 @@ const Profile = () => {
               {showHistory ? "Hide History" : "View History"}
             </button>
             <button className="logout-btn" onClick={handleLogout}>Logout</button>
-            <button className="home-btn" onClick={goHome}>Home</button>
+            <button className="homebtn" onClick={goHome}>Home</button>
           </div>
 
           {showHistory && (

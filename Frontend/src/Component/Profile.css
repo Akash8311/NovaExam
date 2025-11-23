@@ -48,7 +48,7 @@
   position: absolute;
   bottom: 10px;
   right: 6px;
-  background-color: #007bff;
+  background-color: #128a78;
   color: white;
   font-size: 14px;
   padding: 5px;
@@ -67,7 +67,7 @@
     gap: 15px;
   }
 
-  .history-btn, .logout-btn ,.home{
+  .history-btn, .logout-btn ,.homebtn{
     padding: 8px 16px;
     font-size: 14px;
     border-radius: 6px;
@@ -133,10 +133,7 @@
   .exam-history ul {
     padding-left: 20px;
   }
-  .home{
-    background-color: #007bff;
-    color: white;
-  }
+ 
 
   .editable-input {
   border: 1px solid #ccc;
@@ -163,7 +160,7 @@
 }
 
 .edit-button:hover {
-  background-color: #0056b3;
+  background-color: #128a78;
 }
 
 .exam-history {
@@ -182,7 +179,7 @@
 .exam-history h3 {
   text-align: center;
   font-size: 26px;
-  color: #027161;
+  color: #128a78;
   margin-bottom: 20px;
 }
 
@@ -279,27 +276,31 @@
   margin-top: 12px;
 }
 
-.history-btn, .logout-btn, .home-btn, .edit-button, .Dowload {
+.history-btn, .logout-btn, .homebtn, .edit-button, .Dowload {
   padding: 8px 14px;
   border: none;
   border-radius: 8px;
-  background: #027161;
+  background: #41af9f;
   color: white;
   cursor: pointer;
   font-weight: 600;
 }
 
 .logout-btn:hover{
-  background-color: #1e1bd6;
+  background-color: #128a78;
   color: #f0fdfb;
   
 }
+.homebtn:hover{
+   background-color: #128a78;
+  color: #f0fdfb;
+}
 .Dowload:hover{
-    background-color: #1e1bd6;
+    background-color: #128a78;
   color: #f0fdfb;
 }
 .history-btn:hover{
-   background-color: #1e1bd6;
+   background-color: #128a78;
   color: #f0fdfb;
 }
 
