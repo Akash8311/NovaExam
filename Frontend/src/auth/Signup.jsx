@@ -94,7 +94,7 @@ function SignupPage() {
 
         // Send welcome email
         emailjs.send(
-          'service_11dsjyb',
+          'service_o84ifif',
           'template_7yf1jaa',
           {
             name: formData.name,
