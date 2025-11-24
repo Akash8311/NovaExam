@@ -193,7 +193,7 @@ const Trivia = () => {
   const navigate = useNavigate();
 
   const userName = localStorage.getItem("userName") || "Student";
-  const examName = "Programming Test";
+  const examName = "Trivia MCQ Test";
 
   // Shuffle questions once on component mount
   useEffect(() => {
@@ -251,7 +251,7 @@ const Trivia = () => {
   const calculateResult = () => {
     let finalScore = 0;
     selectedOptions.forEach((ans, i) => {
-      const correct = questions[i].correctAnswer;
+      const correct = questions[i].correct;
       if (Array.isArray(correct)) {
         if (correct.includes(ans)) finalScore++;
       } else {
@@ -282,7 +282,7 @@ const Trivia = () => {
     <div className='keyboard'>
       <div className="quiz-container">
         <span className="quiz-title">
-         Trivia<p className="quiz-subtitle">Test🛸</p>
+         Trivia<p className="quiz-subtitle">MCQ🛸</p>
         </span>
         <div className="underline3" style={{ width: '405px' }}></div>
         <p className="timer">⏳Time Left: {formatTime(timeLeft)} ⏰</p>

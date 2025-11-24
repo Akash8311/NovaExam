@@ -192,7 +192,7 @@ const Ml = () => {
   const navigate = useNavigate();
 
   const userName = localStorage.getItem("userName") || "Student";
-  const examName = "Programming Test";
+  const examName = "Machine Learning MCQ Test";
 
   // Shuffle questions once on component mount
   useEffect(() => {
@@ -250,7 +250,7 @@ const Ml = () => {
   const calculateResult = () => {
     let finalScore = 0;
     selectedOptions.forEach((ans, i) => {
-      const correct = questions[i].correctAnswer;
+      const correct = questions[i].correct;
       if (Array.isArray(correct)) {
         if (correct.includes(ans)) finalScore++;
       } else {
@@ -280,7 +280,7 @@ const Ml = () => {
     <div className='keyboard'>
       <div className="quiz-container">
         <span className="quiz-title">
-         Machine Learning<p className="quiz-subtitle">Test🎯</p>
+         Machine Learning<p className="quiz-subtitle">MCQ🎯</p>
         </span>
         <div className="underline3" style={{ width: '450px' }}></div>
         <p className="timer">⏳Time Left: {formatTime(timeLeft)} ⏰</p>

@@ -193,7 +193,7 @@ const Practice = () => {
   const navigate = useNavigate();
 
   const userName = localStorage.getItem("userName") || "Student";
-  const examName = "Programming Test";
+  const examName = "Practice MCQ Test";
 
   // Shuffle questions once on component mount
   useEffect(() => {
@@ -281,7 +281,7 @@ const Practice = () => {
     <div className='keyboard'>
       <div className="quiz-container">
         <span className="quiz-title">
-          Practice<p className="quiz-subtitle">Test📈</p>
+          Practice<p className="quiz-subtitle">MCQt📈</p>
         </span>
         <div className="underline3" style={{ width: '405px' }}></div>
         <p className="timer">⏳Time Left: {formatTime(timeLeft)} ⏰</p>

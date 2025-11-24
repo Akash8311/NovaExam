@@ -164,12 +164,32 @@ function shuffleArray(array) {
   return arr;
 }
 
-const saveResultToLocal = (examName, score, total) => {
-  const existing = JSON.parse(localStorage.getItem("examHistory")) || [];
-  const now = new Date().toLocaleString();
-  const updated = [...existing, { examName, score, total, completedAt: now }];
-  localStorage.setItem("examHistory", JSON.stringify(updated));
+const saveResultToLocal = (score, total) => {
+
+  // Automatically detect which exam user is giving
+  const urlPath = window.location.pathname.toLowerCase(); 
+  let examName = "NovaExam Test";
+
+  if (urlPath.includes("programming")) examName = "Programming Test";
+  else if (urlPath.includes("gk")) examName = "General Knowledge Test";
+  else if (urlPath.includes("python")) examName = "Practice Test";
+  else if (urlPath.includes("ml")) examName = "Machine Learning Test";
+  else if (urlPath.includes("java")) examName = "Java Test";
+  else if (urlPath.includes("c++")) examName = "C++ Test";
+
+  const history = JSON.parse(localStorage.getItem("examHistory")) || [];
+
+  const newRecord = {
+    examName,
+    score,
+    total,
+    completedAt: new Date().toLocaleString(),
+  };
+
+  history.push(newRecord);
+  localStorage.setItem("examHistory", JSON.stringify(history));
 };
+
 
 const getGrade = (score) => {
   if (score >= 27) return "Ex";
@@ -246,20 +266,21 @@ const Programming = () => {
     }
   };
 
-  const calculateResult = () => {
-    let finalScore = 0;
-    selectedOptions.forEach((ans, i) => {
-      const correct = questions[i].correctAnswer;
-      if (Array.isArray(correct)) {
-        if (correct.includes(ans)) finalScore++;
-      } else {
-        if (ans === correct) finalScore++;
-      }
-    });
-    setScore(finalScore);
-    setShowResult(true);
-    saveResultToLocal(examName, finalScore, questions.length);
-  };
+ const calculateResult = () => {
+  let finalScore = 0;
+  selectedOptions.forEach((ans, i) => {
+    const correct = questions[i].correct;
+    if (Array.isArray(correct)) {
+      if (correct.includes(ans)) finalScore++;
+    } else {
+      if (ans === correct) finalScore++;
+    }
+  });
+  setScore(finalScore);
+  setShowResult(true);
+  saveResultToLocal(examName, finalScore, questions.length);
+};
+
 
   const handleResultClose = () => {
     navigate('/home');
@@ -280,7 +301,7 @@ const Programming = () => {
     <div className='keyboard'>
       <div className="quiz-container">
         <span className="quiz-title">
-          Programming <p className="quiz-subtitle">Test 💁</p>
+          Programming <p className="quiz-subtitle">MCQ💁</p>
         </span>
         <div className="underline3" style={{ width: '405px' }}></div>
         <p className="timer">⏳Time Left: {formatTime(timeLeft)} ⏰</p>

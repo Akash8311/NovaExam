@@ -207,13 +207,13 @@ const About = () => {
              <div className="profile-containerr" >
         <div className="thirdd" style={{ paddingBottom: '100px' }}>
           <img src="/images/rohan.jpg" alt="Rohan Mishra" />
-          <div className="detailss">Rohan Mishra...
+          <div className="detailss">Aman Srivastav
             <span>Frontend Developer....</span>
           </div>
         </div>
          <div className="thirdd" style={{ paddingBottom: '100px' }}>
           <img src="/images/indranil.jpg" alt="Indranil Das" />
-          <div className="detailss">Indranil Das...
+          <div className="detailss">Anuj Mourya.....
             <span>Frontend Developer.....</span>
           </div>
           </div>
@@ -226,14 +226,14 @@ const About = () => {
          <p style={{fontSize:'50px',paddingTop:'100px',marginLeft:'25px'}}><span style={{color:'#94f099ff',fontSize:'65px'}}>Powering the Core </span><span style={{color:'#2c99f9ff'}}>of Every</span> <span style={{color:'#72bc98ff'}}>Experience</span> </p><p style={{fontFamily:'Poppins',color:'#2f2f30ff',marginLeft:'25px'}}>Our backend team ensures everything works fast, secure, and seamlessly — building the logic that powers every feature from behind the scenes.</p></div>
         <div className="thirdd" style={{ paddingBottom: '100px' }}>
           <img src="/images/sourodeep.jpg" alt="Souradeep Sasmal" />
-          <div className="detailss" style={{marginLeft:'28px'}}>Souradeep Sasmal
-            <span style={{marginRight:'28px'}}>Backend Developer.....</span>
+          <div className="detailss" style={{marginLeft:'-6vh'}}>Avik Bera.....
+            <span style={{marginRight:'-4vh'}}>Backend Developer.....</span>
           </div>
           </div>
            <div className="thirdd" style={{ paddingBottom: '100px' }}>
           <img src="/images/Pranshu .jpg" alt="Pranshu Dey" />
-          <div className="detailss" style={{marginLeft:'28px'}}>Pranshu Dey..........
-            <span style={{marginRight:'28px'}}>Backend Developer.....</span>
+          <div className="detailss" style={{marginLeft:'10vh'}}>Barun Kumar Manjhi...
+            <span style={{marginRight:'10vh'}}>Backend Developer.....</span>
           </div>
           </div>
             </div>
@@ -294,7 +294,7 @@ const About = () => {
             </ul>
           </div>
           <div className="details-animated">
-            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Rohan Mishra</p>
+            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Aman Srivastav</p>
           </div>
         </div>
         {/* third person */}
@@ -312,7 +312,7 @@ const About = () => {
             </ul>
           </div>
           <div className="details-animated">
-            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Indranil Das</p>
+            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Anuj Mourya</p>
           </div>
         </div>
 
@@ -333,7 +333,7 @@ const About = () => {
             </ul>
           </div>
           <div className="details-animated">
-            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Souradeep Sasmal</p>
+            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Avik Bera</p>
           </div>
         </div>
         {/* 5th person */}
@@ -351,7 +351,7 @@ const About = () => {
             </ul>
           </div>
           <div className="details-animated">
-            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Pranshu Dey</p>
+            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Barun Kumar Manjhi</p>
           </div>
         </div>
       </div>

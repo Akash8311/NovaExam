@@ -96,13 +96,13 @@ function Home() {
         <div className="dropdown-section" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <select defaultValue="" required className="custom-select" onChange={handleExamNavigation}>
             <option value="" disabled>Type of Test</option>
-            <option value="/Programming"> Programming Test</option>
-            <option value="/Gk">GK Test</option>
-            <option value="/Timed">Timed Quiz</option>
+            <option value="/Programming"> Programming MCQ</option>
+            <option value="/Gk">GK MCQ</option>
+            <option value="/Timed">Python MCQ</option>
             <option value="/Practice">Practice MCQ</option>
-            <option value="/Technical">Technicaly Test</option>
-            <option value="/Trivia">Trivia Exam</option>
-            <option value="/Ml">Machine Learning Test</option>
+            <option value="/Technical">Technicaly MCQ</option>
+            <option value="/Trivia">Trivia MCQ</option>
+            <option value="/Ml">Machine Learning MCQ</option>
           </select>
           <select defaultValue="" required className="custom-select" onChange={handleAboutChange}>
             <option value="" disabled>Industry</option>
@@ -507,13 +507,13 @@ function Home() {
           <div className="footer-section">
             <h4>Types Of Exams</h4>
             <ul>
-              <li>Programming Exams</li>
-              <li>General Knowledge</li>
-              <li>Timed Quiz</li>
-              <li>Practice Test</li>
-              <li>Technical Quizzes</li>
-              <li>Trivia Quizzes</li>
-              <li>Machine Learning</li>
+              <li>Programming MCQ</li>
+              <li>General MCQ</li>
+              <li>Python MCQ</li>
+              <li>Practice MCQ</li>
+              <li>Technical MCQ</li>
+              <li>Trivia MCQ</li>
+              <li>Machine Learning MCQ</li>
             </ul>
           </div>
 

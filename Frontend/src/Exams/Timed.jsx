@@ -5,156 +5,172 @@ import html2pdf from 'html2pdf.js';
 
 const questionsData = [
   {
-    question: "Which physicist developed the theory of general relativity?",
-    options: ["Isaac Newton", "Albert Einstein", "Niels Bohr", "Galileo Galilei"],
-    correct: "Albert Einstein"
+    question: "Which keyword is used to define a function in Python?",
+    options: ["func", "def", "function", "lambda"],
+    correct: "def"
   },
   {
-    question: "What is the capital city of Mongolia?",
-    options: ["Ulaanbaatar", "Astana", "Tashkent", "Bishkek"],
-    correct: "Ulaanbaatar"
+    question: "What is the correct file extension for Python files?",
+    options: [".pt", ".py", ".p", ".pyt"],
+    correct: ".py"
   },
   {
-    question: "In computer science, what does the acronym “FIFO” stand for?",
-    options: ["First In First Out", "Fast Input Fast Output", "File Input File Output", "First Input First Output"],
-    correct: "First In First Out"
+    question: "Which data type is immutable in Python?",
+    options: ["List", "Dictionary", "Set", "Tuple"],
+    correct: "Tuple"
   },
   {
-    question: "The longest river in Asia is the...",
-    options: ["Yangtze", "Mekong", "Ganges", "Lena"],
-    correct: "Yangtze"
+    question: "Which built-in function returns the length of an object?",
+    options: ["count()", "size()", "length()", "len()"],
+    correct: "len()"
   },
   {
-    question: "Who was the first woman to win a Nobel Prize?",
-    options: ["Marie Curie", "Dorothy Hodgkin", "Rosalind Franklin", "Ada Lovelace"],
-    correct: "Marie Curie"
+    question: "What does the // operator do?",
+    options: ["Modulo", "Floor division", "Exponent", "Bitwise OR"],
+    correct: "Floor division"
   },
   {
-    question: "What is the powerhouse of the cell?",
-    options: ["Ribosome", "Mitochondria", "Nucleus", "Golgi apparatus"],
-    correct: "Mitochondria"
+    question: "Which keyword is used to create a class in Python?",
+    options: ["object", "class", "define", "struct"],
+    correct: "class"
   },
   {
-    question: "Which treaty ended World War I?",
-    options: ["Treaty of Versailles", "Treaty of Paris", "Treaty of Tordesillas", "Treaty of Ghent"],
-    correct: "Treaty of Versailles"
+    question: "Which of these is a Python list?",
+    options: ["(1,2,3)", "{1,2,3}", "[1,2,3]", "<1,2,3>"],
+    correct: "[1,2,3]"
   },
   {
-    question: "Who is credited with inventing the World Wide Web?",
-    options: ["Tim Berners-Lee", "Bill Gates", "Steve Jobs", "Vint Cerf"],
-    correct: "Tim Berners-Lee"
+    question: "How do you start a comment in Python?",
+    options: ["//", "/*", "#", "--"],
+    correct: "#"
   },
   {
-    question: "Which planet has the most moons?",
-    options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
-    correct: "Saturn"
+    question: "Which function converts a string to an integer?",
+    options: ["float()", "str()", "int()", "num()"],
+    correct: "int()"
   },
   {
-    question: "In economics, what does GDP stand for?",
-    options: ["Gross Domestic Product", "General Domestic Price", "Gross Debt Product", "Government Development Plan"],
-    correct: "Gross Domestic Product"
+    question: "What is the output of 2 ** 3?",
+    options: ["6", "8", "9", "12"],
+    correct: "8"
   },
   {
-    question: "Who wrote the novel “One Hundred Years of Solitude”?",
-    options: ["Gabriel García Márquez", "Pablo Neruda", "Mario Vargas Llosa", "Isabel Allende"],
-    correct: "Gabriel García Márquez"
+    question: "Which module in Python is used for generating random numbers?",
+    options: ["math", "random", "numbers", "system"],
+    correct: "random"
   },
   {
-    question: "The “Little Ice Age” occurred during which centuries?",
-    options: ["14th to 19th", "10th to 12th", "18th to 20th", "5th to 8th"],
-    correct: "14th to 19th"
+    question: "Which loop is used when the number of iterations is unknown?",
+    options: ["for loop", "while loop", "do loop", "foreach"],
+    correct: "while loop"
   },
   {
-    question: "What is the largest known living structure on Earth?",
-    options: ["Amazon Rainforest", "Great Barrier Reef", "Sahara Desert", "Mariana Trench"],
-    correct: "Great Barrier Reef"
+    question: "What is the correct way to create a dictionary?",
+    options: [
+      "{'a':1, 'b':2}",
+      "[a:1, b:2]",
+      "(a=1, b=2)",
+      "<a=1, b=2>"
+    ],
+    correct: "{'a':1, 'b':2}"
   },
   {
-    question: "Which element has the highest electrical conductivity at room temperature?",
-    options: ["Silver", "Copper", "Gold", "Aluminum"],
-    correct: "Silver"
+    question: "Which of the following is a Python boolean value?",
+    options: ["TRUE", "True", "true", "YES"],
+    correct: "True"
   },
   {
-    question: "The Battle of Hastings in 1066 was fought in which country?",
-    options: ["England", "France", "Scotland", "Ireland"],
-    correct: "England"
+    question: "What will print(type('Hello')) output?",
+    options: ["<class 'string'>", "<class 'char'>", "<class 'str'>", "<str>"],
+    correct: "<class 'str'>"
   },
   {
-    question: "What is the currency of Switzerland?",
-    options: ["Euro", "Swiss Franc", "Krona", "Lira"],
-    correct: "Swiss Franc"
+    question: "Which method is used to add an item to a list?",
+    options: ["insert()", "add()", "append()", "push()"],
+    correct: "append()"
   },
   {
-    question: "Who painted “The Persistence of Memory”?",
-    options: ["Salvador Dalí", "Pablo Picasso", "Claude Monet", "Vincent van Gogh"],
-    correct: "Salvador Dalí"
+    question: "What does the break statement do?",
+    options: [
+      "Skips one iteration",
+      "Stops the loop entirely",
+      "Restarts the loop",
+      "Pauses the loop"
+    ],
+    correct: "Stops the loop entirely"
   },
   {
-    question: "Which ancient civilization built Machu Picchu?",
-    options: ["Inca", "Maya", "Aztec", "Olmec"],
-    correct: "Inca"
+    question: "Which operator is used to check equality?",
+    options: ["=", "==", "===", "equals"],
+    correct: "=="
   },
   {
-    question: "What is the smallest country in the world by land area?",
-    options: ["Monaco", "Vatican City", "Nauru", "San Marino"],
-    correct: "Vatican City"
+    question: "Which Python keyword is used for exception handling?",
+    options: ["error", "catch", "try", "exception"],
+    correct: "try"
   },
   {
-    question: "The Fibonacci sequence is closely related to which mathematical concept?",
-    options: ["Golden Ratio", "Pi", "Euler’s Number", "Pythagorean Theorem"],
-    correct: "Golden Ratio"
+    question: "What is the correct syntax for a lambda function?",
+    options: [
+      "lambda x: x+1",
+      "lambda(x) = x+1",
+      "lambda(x): x+1",
+      "lambda: x->x+1"
+    ],
+    correct: "lambda x: x+1"
   },
   {
-    question: "In literature, who created the character Sherlock Holmes?",
-    options: ["Arthur Conan Doyle", "Agatha Christie", "Edgar Allan Poe", "Mark Twain"],
-    correct: "Arthur Conan Doyle"
+    question: "Which data type can store multiple types of values?",
+    options: ["int", "bool", "list", "None"],
+    correct: "list"
   },
   {
-    question: "What is the rarest blood type in humans?",
-    options: ["AB-", "O+", "A-", "B-"],
-    correct: "AB-"
+    question: "Which function is used to read input from the user?",
+    options: ["scan()", "read()", "input()", "get()"],
+    correct: "input()"
   },
   {
-    question: "Which gas makes up the majority of Earth's atmosphere?",
-    options: ["Nitrogen", "Oxygen", "Carbon Dioxide", "Argon"],
-    correct: "Nitrogen"
+    question: "What is the output of bool(0)?",
+    options: ["True", "False", "0", "None"],
+    correct: "False"
   },
   {
-    question: "The Rosetta Stone helped scholars decipher which ancient script?",
-    options: ["Egyptian Hieroglyphs", "Cuneiform", "Linear B", "Sanskrit"],
-    correct: "Egyptian Hieroglyphs"
+    question: "Which keyword is used to import modules?",
+    options: ["package", "include", "import", "require"],
+    correct: "import"
   },
   {
-    question: "Who was the first person to reach the South Pole?",
-    options: ["Roald Amundsen", "Robert Falcon Scott", "Ernest Shackleton", "Edmund Hillary"],
-    correct: "Roald Amundsen"
+    question: "How do you convert a list to a set?",
+    options: ["set(list)", "convert(list)", "toSet(list)", "list.set()"],
+    correct: "set(list)"
   },
   {
-    question: "What does the acronym “NASA” stand for?",
-    options: ["National Aeronautics and Space Administration", "North American Space Agency", "National Aerospace and Space Association", "National Aeronautics and Space Agency"],
-    correct: "National Aeronautics and Space Administration"
+    question: "What is Python primarily used for?",
+    options: ["Web development", "Machine Learning", "Automation", "All of the above"],
+    correct: "All of the above"
   },
   {
-    question: "Which war was fought between the North and South regions in the United States?",
-    options: ["American Civil War", "Revolutionary War", "World War I", "Mexican-American War"],
-    correct: "American Civil War"
+    question: "Which symbol is used for string concatenation?",
+    options: ["&", "*", "+", "%"],
+    correct: "+"
   },
   {
-    question: "Who composed the music for the ballet “The Nutcracker”?",
-    options: ["Pyotr Ilyich Tchaikovsky", "Ludwig van Beethoven", "Johann Sebastian Bach", "Igor Stravinsky"],
-    correct: "Pyotr Ilyich Tchaikovsky"
+    question: "Which function returns the highest value?",
+    options: ["high()", "max()", "top()", "largest()"],
+    correct: "max()"
   },
   {
-    question: "What is the term for animals that eat both plants and meat?",
-    options: ["Herbivores", "Carnivores", "Omnivores", "Detritivores"],
-    correct: "Omnivores"
+    question: "Which of the following is NOT a Python data type?",
+    options: ["string", "integer", "float", "decimal"],
+    correct: "decimal"
   },
   {
-    question: "Which country has won the most FIFA World Cups?",
-    options: ["Brazil", "Germany", "Italy", "Argentina"],
-    correct: "Brazil"
+    question: "Which loop repeats a fixed number of times?",
+    options: ["for loop", "while loop", "repeat loop", "if loop"],
+    correct: "for loop"
   }
-];
+]
+
 
 // You can shuffle questions on mount if you want randomness:
 function shuffleArray(array) {
@@ -193,7 +209,7 @@ const Timed = () => {
   const navigate = useNavigate();
 
   const userName = localStorage.getItem("userName") || "Student";
-  const examName = "Programming Test";
+  const examName = "Pythone MCQ Test";
 
   // Shuffle questions once on component mount
   useEffect(() => {
@@ -251,7 +267,7 @@ const Timed = () => {
   const calculateResult = () => {
     let finalScore = 0;
     selectedOptions.forEach((ans, i) => {
-      const correct = questions[i].correctAnswer;
+      const correct = questions[i].correct;
       if (Array.isArray(correct)) {
         if (correct.includes(ans)) finalScore++;
       } else {
@@ -281,7 +297,7 @@ const Timed = () => {
     <div className='keyboard'>
       <div className="quiz-container">
         <span className="quiz-title">
-         Timed Quiz<p className="quiz-subtitle">Test🛸</p>
+         Python<p className="quiz-subtitle">MCQ🛸</p>
         </span>
         <div className="underline3" style={{ width: '405px' }}></div>
         <p className="timer">⏳Time Left: {formatTime(timeLeft)} ⏰</p>
