@@ -351,7 +351,7 @@ const About = () => {
             </ul>
           </div>
           <div className="details-animated">
-            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins'}}>Barun Kumar Manjhi</p>
+            <p style={{color:'rgba(5, 65, 56, 0.73)',fontWeight:'bold',fontFamily:'Poppins',fontSize:"28px"}}>Barun Kumar Manjhi</p>
           </div>
         </div>
       </div>
